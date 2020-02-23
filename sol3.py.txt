@@ -1,0 +1,16 @@
+n=int(input())
+s=bin(n)
+s=s.replace('0b','')
+l=len(s)
+ma=0
+temp=0
+for i in s:
+    for j in s:
+        if i=='1' and j=='1':
+            temp=temp+1
+            if ma<=temp :
+                ma=temp
+
+        else:
+            temp=0
+print(ma)
