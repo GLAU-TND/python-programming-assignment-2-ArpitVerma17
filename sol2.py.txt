@@ -1,0 +1,21 @@
+l = eval(input())
+k = len(str(max(l)))
+ma = 0
+ans = ''
+l1 = []
+print(l)
+ls1 = [str(i) for i in l]
+for h in range(len(l)):
+    ma = 0
+    for i in l:
+        for j in l:
+            if i != j and i not in l1:
+                y = i + j
+                y = int(y[:k])
+                if y>ma:
+                    ma = y
+                    n = str(i)
+    l1.append(n)
+for i in l1:
+    ans = ans+i
+print(ans)
